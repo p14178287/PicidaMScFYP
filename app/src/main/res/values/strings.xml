@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MSc_DMUMentalHealthChecker</string>
+    <string name="imageTemp">TODO</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="signInButton">Login</string>
+    <string name="signUp">Don\'t have an account? SignUp</string>
+    <string name="name">Name</string>
+</resources>
