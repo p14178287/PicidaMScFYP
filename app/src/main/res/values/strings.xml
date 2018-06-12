@@ -6,4 +6,9 @@
     <string name="signInButton">Login</string>
     <string name="signUp">Don\'t have an account? SignUp</string>
     <string name="name">Name</string>
+    <string name="outdoorYellowTentBlurred">outdoorYellowTentBlurred</string>
+    <string name="MHlogo">MHlogo</string>
+    <string name="wellMessage">Welcome to
+        DMU Mental Health Crisis Management</string>
+    <string name="todo">TODO</string>
 </resources>
