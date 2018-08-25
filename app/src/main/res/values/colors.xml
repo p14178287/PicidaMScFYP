@@ -6,4 +6,6 @@
     <color name="white">#ffffff</color>
     <color name="signInButtonColour">#00e6ff</color>
     <color name="signUpRelativeLayout">#57ffffff</color>
+    <color name="colorRegister">#f2fe71</color>
+    <color name="colorConstraintLayoutBackground">#025760</color>
 </resources>

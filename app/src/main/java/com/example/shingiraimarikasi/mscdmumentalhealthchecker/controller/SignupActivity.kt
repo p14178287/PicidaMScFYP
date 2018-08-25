@@ -10,20 +10,20 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.shingiraimarikasi.mscdmumentalhealthchecker.R
 
-class SignUpActivity : AppCompatActivity(), View.OnClickListener {
+class SignupActivity : AppCompatActivity(), View.OnClickListener {
     private var editTextUsername: EditText? = null
     private var editTextPassword: EditText? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
+        setContentView(R.layout.activity_signup)
         //        findViewById(R.id.signUpNewUser).setOnClickListener(this);
 
     }
 
     private fun registerUser() {
         val newEmail = editTextUsername!!.text.toString().trim { it <= ' ' }
-        val newPassword = editTextPassword!!.text.toString().trim({ it <= ' ' })
+        val newPassword = editTextPassword!!.text.toString().trim { it <= ' ' }
 
         /**
          * FOR USER INPUT VALIDATION
@@ -52,7 +52,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.signUpNewUser //what happens after pressing the sign up button
+            R.id.register_newuser_btn //what happens after pressing the sign up button
             -> registerUser()
             R.id.alreadyHaveAccount -> startActivity(Intent(this, MainActivity::class.java))
         }

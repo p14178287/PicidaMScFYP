@@ -1,182 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout_editor_absoluteY="25dp">
+    android:background="#FF0097A7">
 
-    <ImageView
-        android:id="@+id/formBack"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="@string/outdoorYellowTentBlurred"
-        android:scaleType="centerCrop"
-        android:src="@drawable/outdoor_yellow_tent_blurred"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <!--find appropriate logo-->
-    <ImageView
-        android:id="@+id/formLogo"
-        android:layout_width="91dp"
-        android:layout_height="89dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginLeft="136dp"
-        android:layout_marginRight="136dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="38dp"
-        android:contentDescription="@string/mhLogo"
-        android:scaleType="fitCenter"
-        android:src="@drawable/mental_health_logo"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="0dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="0dp" />
-
-    <!--to change_opacity of the background colour add 80 in font of the #-->
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="342dp"
-        android:layout_height="335dp"
-
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="#4037AEE4"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/formBack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/formBack"
-        app:layout_constraintVertical_bias="0.734">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:contentDescription="@string/wellMessage"
-            android:text="@string/wellMessage"
-            android:textAllCaps="false"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            tools:layout_margin="5dp"
-            tools:layout_marginLeft="5dp"
-            tools:layout_marginRight="5dp"
-            tools:paddingTop="5dp" />
-
-        <AutoCompleteTextView
-            android:id="@+id/email"
-            android:layout_width="290dp"
-            android:layout_height="45dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="83dp"
-            android:focusable="true"
-            android:hint="@string/email"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:typeface="serif"
-            tools:background="@drawable/rounded_white"
-            tools:clickable="true"
-            tools:drawableLeft="@drawable/ic_user_icon"
-            tools:focusable="true"
-            tools:focusableInTouchMode="true"
-            tools:nextFocusDown="@id/password" />
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/password"
-            android:layout_width="290dp"
-            android:layout_height="45dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="10dp"
-            android:cursorVisible="true"
+            android:id="@+id/old_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
             android:ems="10"
-            android:focusable="true"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/new_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:hint="@string/prompt_new_email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/old_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:focusableInTouchMode="true"
             android:hint="@string/password"
-            android:inputType="textPassword|number"
-            android:padding="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            tools:background="@drawable/rounded_white"
-            tools:clickable="true"
-            tools:cursorVisible="true"
-            tools:drawableLeft="@drawable/ic_pass_icon" />
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_marginBottom="40dp"
+            android:focusableInTouchMode="true"
+            android:hint="@string/prompt_new_password"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true" />
 
         <Button
-            android:id="@+id/signInButton"
-            android:layout_width="249dp"
-            android:layout_height="61dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-
-
-            android:layout_marginBottom="73dp"
-            android:background="@drawable/rounded_button"
-            android:hapticFeedbackEnabled="true"
-            android:text="@string/sign_in_button"
-            android:textAllCaps="false"
-            android:textSize="21sp"
-            android:textStyle="normal"
-            android:typeface="normal"
-            android:visibility="visible"
-            tools:clickable="true"
-            tools:focusable="true"
-            tools:layout_height="60dp"
-            tools:layout_width="300dp"
-            tools:padding="5dp"
-            android:textColor="@color/white"
-            android:focusable="true" />
-
-        <TextView
-            android:id="@+id/signUpNewUser"
-            android:layout_width="291dp"
+            android:id="@+id/btnChangeEmail"
+            style="?android:textAppearanceSmall"
+            android:layout_width="355dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="30dp"
-            android:contentDescription="@string/sign_up_new_user"
-            android:text="@string/sign_up_textView"
-            android:textAppearance="@android:style/TextAppearance.Holo.DialogWindowTitle"
-            android:textColor="#ffffff"
-            android:textSize="18sp"
-            android:typeface="serif"
-            app:fontFamily="sans-serif"
-            tools:layout_margin="15dp"
-            tools:padding="5dp" />
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/button_change_email"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/btnChangePassword"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/button_change_password"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/send_details_btn"
+            style="?android:textAppearanceSmall"
+            android:layout_width="354dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/button_send"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/del_acc_btn"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/button_delete_account"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/sign_out"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#40bd0a"
+            android:text="@string/button_sign_out"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

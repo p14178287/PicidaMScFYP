@@ -10,11 +10,12 @@
     <!-- Strings related to Sign In Activity -->
     <string name="username">username</string>
     <string name="sign_in_button">Sign In</string>
-    <string name="sign_up_textView">Don\'t have an account? SignUp</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="button_forgot_password">Forgot password?</string>
+    <string name="button_link_to_register">Don\'t have an account? Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
     <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_password_short">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
@@ -22,14 +23,28 @@
     </string>
     <string name="sign_up_background">sign_up_background</string>
     <string name="please_sign_up">Please Sign Up</string>
+    <string name="failed_auth">Authentication failed, check your email and password or sign up</string>
 
     <!--Strings related to Sign Up Activity-->
-    <string name="new_email">Email</string>
-    <string name="new_password">Password</string>
     <string name="re_enter_password">Re-enter Password</string>
     <string name="sign_up_new_user">sign_up_new_user</string>
-    <string name="register_button">Button</string>
+    <string name="button_register">Register</string>
     <string name="already_have_account">Already have an account? Sign In</string>
+    
+    <!--activity_main strings-->
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="button_reset_password">Reset Password</string>
+    <string name="button_back"><![CDATA[<< Back]]></string>
+    <string name="prompt_new_email">New Email</string>
+    <string name="prompt_new_password">New Password</string>
+    <string name="button_change_email">Change email </string>
+    <string name="button_change_password">Change password </string>
+    <string name="button_confirm_change">Confirm change </string>
+    <string name="button_send">Send to change details</string>
+    <string name="button_delete_account">Delete Account</string>
+    <string name="button_sign_out">Sign Out</string>
+    <string name="forgot_password_label">Forgot password?</string>
+    <string name="forgot_password_message">We just need your registered Email Id to sent you password reset instructions.</string>
 
 
 </resources>
