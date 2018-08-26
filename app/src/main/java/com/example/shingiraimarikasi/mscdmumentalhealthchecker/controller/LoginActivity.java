@@ -13,25 +13,21 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText loginEmail, loginPassword;
-    private FirebaseAuth auth;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        EditText loginEmail, loginPassword;
         Button signupBtn, loginBtn, passResetBtn; //variables made local as not accessed elsewhere
 
-        super.onCreate(savedInstanceState);
-        //Get Firebase auth instance
-        auth = FirebaseAuth.getInstance();
+        super.onCreate(savedInstanceState); //Get Firebase auth instance
+        FirebaseAuth auth = FirebaseAuth.getInstance();
 
         if (auth.getCurrentUser() != null) {
+
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
             finish();
         }
 
-        // set the view now
         setContentView(R.layout.activity_login);
 
 //        Toolbar toolbar = findViewById(R.id.toolbar);
@@ -43,8 +39,8 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.login_btn);
         passResetBtn = findViewById(R.id.forgot_pass_btn);
 
-        //Get Firebase auth instance
-        auth = FirebaseAuth.getInstance();
+
+
 
         signupBtn.setOnClickListener( v ->
                 startActivity(new Intent(LoginActivity.this, SignupActivity.class)));
