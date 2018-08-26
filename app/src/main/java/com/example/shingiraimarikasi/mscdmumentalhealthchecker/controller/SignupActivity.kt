@@ -81,13 +81,5 @@ class SignupActivity : AppCompatActivity() {
 
         }
 
-//    override fun onClick(v: View) {
-//        when (v.id) {
-//            R.id.register_newuser_btn //what happens after pressing the sign up button
-//            -> registerUser()
-//            R.id.signup_already_haveAcc_btn -> startActivity(Intent(this, MainActivity::class.java))
-//        }
-//    }
-
     }
 }
