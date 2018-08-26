@@ -64,8 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
 
-
-                //authenticate user
+            //authenticate user.
                 auth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(LoginActivity.this, task -> {
                                 // If sign in fails, display a message to the user. If sign in succeeds
