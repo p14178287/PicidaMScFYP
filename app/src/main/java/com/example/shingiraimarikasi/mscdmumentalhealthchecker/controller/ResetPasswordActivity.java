@@ -3,10 +3,8 @@ package com.example.shingiraimarikasi.mscdmumentalhealthchecker.controller;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.shingiraimarikasi.mscdmumentalhealthchecker.R;
@@ -17,7 +15,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
     private EditText inputEmail;
     private Button btnReset, btnBack;
     private FirebaseAuth auth;
-    private ProgressBar progressBar;
+//    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +25,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
         inputEmail = findViewById(R.id.email);
         btnReset = findViewById(R.id.btn_reset_password);
         btnBack =  findViewById(R.id.btn_back);
-        progressBar = findViewById(R.id.progressBar);
+//        progressBar = findViewById(R.id.progressBar);
 
         auth = FirebaseAuth.getInstance();
 
@@ -41,7 +39,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                 return;
             }
 
-            progressBar.setVisibility(View.VISIBLE);
+//            progressBar.setVisibility(View.VISIBLE);
             auth.sendPasswordResetEmail(email)
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
@@ -50,7 +48,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                             Toast.makeText(ResetPasswordActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
                         }
 
-                        progressBar.setVisibility(View.GONE);
+//                        progressBar.setVisibility(View.GONE);
 
                     });
 

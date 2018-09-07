@@ -11,7 +11,7 @@ import android.widget.Toast
 import com.example.shingiraimarikasi.mscdmumentalhealthchecker.R
 import com.google.firebase.auth.FirebaseAuth
 
-class SignupActivity : AppCompatActivity() {
+class SignupActivity : AppCompatActivity(), StringValidationInterface {
 
 //    private var signupEmail: EditText? = null // 1.consider making variable local and immutable
 //    private var signupPassword: EditText? = null
@@ -31,8 +31,8 @@ class SignupActivity : AppCompatActivity() {
         val signupEmail: EditText = findViewById(R.id.editTextNewEmail)
         val signupPassword: EditText = findViewById(R.id.editTextNewPasswd)
         val registerBtn: Button = findViewById(R.id.register_newuser_btn) //2. see 1 above
-        val forgotPassBtn: Button = findViewById(R.id.signup_forgot_pass_btn)
-        val alreadyHaveAccBtn: Button = findViewById(R.id.signup_already_haveAcc_btn)
+//        val forgotPassBtn: Button = findViewById(R.id.signup_forgot_pass_btn)
+//        val alreadyHaveAccBtn: Button = findViewById(R.id.signup_already_haveAcc_btn)
 
         registerBtn.setOnClickListener { _ ->
             /**

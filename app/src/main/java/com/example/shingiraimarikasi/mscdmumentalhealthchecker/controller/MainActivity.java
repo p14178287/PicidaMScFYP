@@ -54,14 +54,15 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.old_password);
         newPassword = findViewById(R.id.new_password);
 
-        oldEmail.setVisibility(View.GONE);
-        newEmail.setVisibility(View.GONE);
-        password.setVisibility(View.GONE);
-        newPassword.setVisibility(View.GONE);
+//        oldEmail.setVisibility(View.GONE); //temporarily disabled to see visibility in the layout, rem: to change and make them visible again
+//        newEmail.setVisibility(View.GONE);
+//        password.setVisibility(View.GONE);
+//        newPassword.setVisibility(View.GONE);
+
 //        changeEmail.setVisibility(View.GONE);
 //        changePassword.setVisibility(View.GONE);
-        btnSendEmail.setVisibility(View.GONE);
-        btnDelAccount.setVisibility(View.GONE);
+//        btnSendEmail.setVisibility(View.GONE);
+//        btnDelAccount.setVisibility(View.GONE);
 
 //        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
