@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.shingiraimarikasi.mscdmumentalhealthchecker">
+    package="com.example.shingiraimarikasi.PicidaMScFYP">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".controller.LoginActivity"
+            android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.LoginActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,11 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controller.MainActivity" />
-        <activity android:name=".controller.SignupActivity" />
-        <activity android:name=".controller.ResetPasswordActivity" />
+        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.MainActivity" />
+        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.SignupActivity" />
+        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ResetPasswordActivity" />
         <activity
-            android:name=".controller.NavigationActivity"
+            android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>

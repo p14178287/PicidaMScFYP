@@ -1,11 +1,9 @@
 <resources>
-    <string name="app_name">MSc_DMUMentalHealthChecker</string>
-
+    <string name="app_name">Mental Health Checker</string>
     <string name="outdoorYellowTentBlurred">outdoorYellowTentBlurred</string>
     <string name="mhLogo">mhLogo</string>
     <string name="wellMessage">Welcome to
         DMU Mental Health Crisis Management</string>
-
 
     <!-- Strings related to Sign In Activity -->
     <string name="username">username</string>
