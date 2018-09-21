@@ -15,7 +15,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-
         <activity
             android:name=".controller.LoginActivity"
             android:theme="@style/AppTheme">
@@ -28,6 +27,10 @@
         <activity android:name=".controller.MainActivity" />
         <activity android:name=".controller.SignupActivity" />
         <activity android:name=".controller.ResetPasswordActivity" />
+        <activity
+            android:name=".controller.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

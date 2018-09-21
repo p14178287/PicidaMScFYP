@@ -30,7 +30,7 @@
     <string name="sign_up_new_user">sign_up_new_user</string>
     <string name="button_register">Register</string>
     <string name="already_have_account">Already have an account? Sign In</string>
-    
+
     <!--activity_main strings-->
     <string name="title_activity_reset_password">ResetPasswordActivity</string>
     <string name="button_reset_password">Reset Password</string>
@@ -45,6 +45,13 @@
     <string name="button_sign_out">Sign Out</string>
     <string name="forgot_password_label">Forgot password?</string>
     <string name="forgot_password_message">We just need your registered Email Id to sent you password reset instructions.</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>
