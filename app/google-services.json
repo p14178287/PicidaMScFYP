@@ -1,39 +1,27 @@
 {
   "project_info": {
-    "project_number": "798468922875",
-    "firebase_url": "https://mscdmumentalhealthchecker.firebaseio.com",
-    "project_id": "mscdmumentalhealthchecker",
-    "storage_bucket": "mscdmumentalhealthchecker.appspot.com"
+    "project_number": "89140074821",
+    "firebase_url": "https://picidamscfyp-7950e.firebaseio.com",
+    "project_id": "picidamscfyp-7950e",
+    "storage_bucket": "picidamscfyp-7950e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:798468922875:android:4502e5b7a53c72a5",
+        "mobilesdk_app_id": "1:89140074821:android:09553e351ed8fcfc",
         "android_client_info": {
-          "package_name": "com.example.shingiraimarikasi.msc_dmumentalhealthchecker"
+          "package_name": "com.example.shingiraimarikasi.PicidaMScFYP"
         }
       },
       "oauth_client": [
         {
-          "client_id": "798468922875-1l0qbf7l4cmbc0lc5evqr8pvqaua1ro0.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.shingiraimarikasi.msc_dmumentalhealthchecker",
-            "certificate_hash": "79f32ef8b9902f1dd99aa3910faa2564498dc21d"
-          }
-        },
-        {
-          "client_id": "798468922875-6ucjh43ug28uofeugh6qq9jui63psbd6.apps.googleusercontent.com",
-          "client_type": 3
-        },
-        {
-          "client_id": "798468922875-6ucjh43ug28uofeugh6qq9jui63psbd6.apps.googleusercontent.com",
+          "client_id": "89140074821-7ub3um0pag0hktanfc7dt8c7pckhrc2t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDD6xgUvKru2p_o8fGseizqt73VK0OJHuY"
+          "current_key": "AIzaSyDsPOm1_iYf8_1hb6T9m1sTJur7q_y8CBk"
         }
       ],
       "services": {
@@ -41,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "798468922875-6ucjh43ug28uofeugh6qq9jui63psbd6.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
