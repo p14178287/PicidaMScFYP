@@ -51,5 +51,8 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!--activity_navigation_drawer-->
+    <string name="sign_out">Sign Out</string>
+
 
 </resources>
