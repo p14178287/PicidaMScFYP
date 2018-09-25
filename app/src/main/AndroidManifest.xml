@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.LoginActivity"
+            android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.LoginActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,11 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.MainActivity" />
-        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.SignupActivity" />
-        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ResetPasswordActivity" />
+        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.ChangeCredentialsActivity" />
+        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.SignupActivity" />
+        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.ResetPasswordActivity" />
         <activity
-            android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.NavigationActivity"
+            android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>

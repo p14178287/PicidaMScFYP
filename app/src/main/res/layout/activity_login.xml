@@ -5,7 +5,7 @@
     android:id="@+id/signInPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#025760"
+    android:background="#FF0097A7"
     tools:layout_editor_absoluteY="25dp">
 
     <!--find appropriate logo-->
@@ -14,22 +14,22 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="#07bdd8"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorConstraintLayoutBackground"
         android:orientation="vertical"
         android:paddingBottom="20dp"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
         android:paddingTop="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/forgot_pass_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/formLogo"
+        app:layout_constraintTop_toTopOf="parent"
         tools:paddingTop="50dp">
 
         <EditText
@@ -39,6 +39,7 @@
             android:ems="10"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
+            android:textColorHighlight="@color/common_google_signin_btn_text_dark_default"
             android:textSize="18sp" />
 
         <EditText
@@ -61,26 +62,42 @@
             android:textSize="14sp"
             tools:layout_marginBottom="10dp"
             tools:layout_marginTop="20dp" />
-    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/formLogo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginLeft="136dp"
-        android:layout_marginRight="136dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/mhLogo"
-        android:scaleType="fitCenter"
-        android:src="@drawable/mental_health_logo"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        <Button
+            android:id="@+id/forgot_pass_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@null"
+            android:text="@string/button_forgot_password"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/signup_newuser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <Button
+            android:id="@+id/signup_newuser"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@null"
+            android:text="@string/button_link_to_register"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/forgot_pass_btn"
+            tools:layout_margin="2dp" />
+    </LinearLayout>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
@@ -109,42 +126,6 @@
         app:layout_constraintGuide_begin="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/forgot_pass_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@null"
-        android:text="@string/button_forgot_password"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/signup_newuser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Button
-        android:id="@+id/signup_newuser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@null"
-        android:text="@string/button_link_to_register"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/forgot_pass_btn" />
 
     <!--to change_opacity of the background colour add 80 in font of the #-->
 

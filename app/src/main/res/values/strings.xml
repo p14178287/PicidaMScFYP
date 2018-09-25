@@ -2,8 +2,6 @@
     <string name="app_name">Mental Health Checker</string>
     <string name="outdoorYellowTentBlurred">outdoorYellowTentBlurred</string>
     <string name="mhLogo">mhLogo</string>
-    <string name="wellMessage">Welcome to
-        DMU Mental Health Crisis Management</string>
 
     <!-- Strings related to Sign In Activity -->
     <string name="username">username</string>
@@ -29,7 +27,7 @@
     <string name="button_register">Register</string>
     <string name="already_have_account">Already have an account? Sign In</string>
 
-    <!--activity_main strings-->
+    <!--activity_changeCredentials strings-->
     <string name="title_activity_reset_password">ResetPasswordActivity</string>
     <string name="button_reset_password">Reset Password</string>
     <string name="button_back"><![CDATA[<< Back]]></string>
@@ -53,6 +51,10 @@
 
     <!--activity_navigation_drawer-->
     <string name="sign_out">Sign Out</string>
+    <string name="add_new_symptoms">Add New Symptoms:</string>
+    <string name="symptom_title">Symptom Title</string>
+    <string name="add">Add</string>
+    <string name="view_all_symptoms">View All Symptoms</string>
 
 
 </resources>
