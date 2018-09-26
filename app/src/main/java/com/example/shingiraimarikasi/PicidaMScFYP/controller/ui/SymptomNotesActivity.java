@@ -39,42 +39,47 @@ public class SymptomNotesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_symptom_notes);
 
 
-        Typeface questrialFont = Typeface.createFromAsset(getAssets(), "fonts/Questrial-Regular.otf");
-        symptomFormTitle.setTypeface(questrialFont);
+//        Typeface questrialFont = Typeface.createFromAsset(getAssets(), "fonts/Questrial-Regular.otf");
+//        symptomFormTitle.setTypeface(questrialFont);
 
-        addSymptomButton.setOnClickListener(v -> {
-            String symptomTitle = symptomTitleEditText.getText().toString();
-            String symptomNotes = symptomNotesEditText.getText().toString();
+//        addSymptomButton.setOnClickListener(v -> {
+//
+//            String symptomTitle, symptomNotes;
+//            if ()
+//                    = symptomTitleEditText.getText().toString();
+//             = symptomNotesEditText.getText().toString();
+//
+//            //importing the data class that will act on the data sent across
+//            SymptomDataActivity symptom = new SymptomDataActivity(symptomTitle, symptomNotes);
+//
+//            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//            String uid = user.getUid();
+//
+//            DatabaseReference dbRef = FirebaseDatabase
+//                    .getInstance()
+//                    .getReference(SymptomConstants.FIREBASE_CHILD_AILMENTS)
+//                    .child(uid);
+//
+//            DatabaseReference pushRef = dbRef.push();
+//            String pushId = pushRef.getKey();
+//            symptom.setPushId(pushId);
+//            pushRef.setValue(symptom);
+//
+//            Toast.makeText(this, "Save Successful!", Toast.LENGTH_SHORT).show();
+//            symptomTitleEditText.setText("");
+//            symptomNotesEditText.setText("");
+//        });
 
-            //importing the data class that will act on the data sent across
-            SymptomDataActivity symptom = new SymptomDataActivity(symptomTitle, symptomNotes);
 
-            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            String uid = user.getUid();
-
-            DatabaseReference dbRef = FirebaseDatabase
-                    .getInstance()
-                    .getReference(SymptomConstants.FIREBASE_CHILD_AILMENTS)
-                    .child(uid);
-
-            DatabaseReference pushRef = dbRef.push();
-            String pushId = pushRef.getKey();
-            symptom.setPushId(pushId);
-            pushRef.setValue(symptom);
-
-            Toast.makeText(this, "Save Successful!", Toast.LENGTH_SHORT).show();
-            symptomTitleEditText.setText("");
-            symptomNotesEditText.setText("");
-        });
-        allSymptomButton.setOnClickListener(v -> {
-            Intent intent = new Intent(SymptomNotesActivity.this, SymptomListActivity.class);
-            startActivity(intent);
-        });
+//        allSymptomButton.setOnClickListener(v -> {
+//            Intent intent = new Intent(SymptomNotesActivity.this, SymptomListActivity.class);
+//            startActivity(intent);
+//        });
     }
 
 
-/**TODO: commented out for now but need a static function that
- pulls the drawer out and static in the sense that it can be called from any class*/
+///**TODO: commented out for now but need a static function that
+// pulls the drawer out and static in the sense that it can be called from any class*/
 
 //    public void navigationDrawer() {
 //        ToggleButton toggle = ActionBarDrawerToggle(
