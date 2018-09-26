@@ -24,6 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.MainActivity"/>
+        <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.SymptomNotesActivity"/>
         <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.ChangeCredentialsActivity" />
         <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.SignupActivity" />
         <activity android:name="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.ResetPasswordActivity" />

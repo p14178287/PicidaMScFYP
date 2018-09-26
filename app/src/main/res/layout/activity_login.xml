@@ -40,7 +40,8 @@
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:textColorHighlight="@color/common_google_signin_btn_text_dark_default"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:autofillHints="" tools:targetApi="o"/>
 
         <EditText
             android:id="@+id/login_password"
@@ -51,7 +52,8 @@
             android:ems="10"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:autofillHints="" tools:targetApi="o"/>
 
         <Button
             android:id="@+id/login_btn"

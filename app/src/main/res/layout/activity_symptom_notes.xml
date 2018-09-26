@@ -38,18 +38,23 @@
             android:textColor="@color/colorPrimary"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:inputType="" />
+            android:inputType=""
+            android:autofillHints="" tools:targetApi="o" />
 
         <Button
             android:id="@+id/addSymptomButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/allSymptomButton"
             android:layout_below="@+id/symptomNotesEditText"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="29dp"
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/add"
-            android:textColor="@color/colorTextIcons" />
+            android:textColor="@color/colorTextIcons"
+            tools:targetApi="lollipop" />
 
         <EditText
             android:id="@+id/symptomNotesEditText"
@@ -63,9 +68,10 @@
             android:layout_marginTop="30dp"
             android:background="@drawable/rounded_button"
             android:ems="10"
-            android:hint="Additional Notes Here"
+            android:hint="@string/additional_notes_here"
             android:inputType="textMultiLine"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:autofillHints="" tools:targetApi="o" />
 
         <Button
             android:id="@+id/allSymptomButton"
@@ -79,7 +85,7 @@
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/view_all_symptoms"
-            android:textColor="@color/colorTextIcons" />
+            android:textColor="@color/colorTextIcons" tools:targetApi="lollipop" />
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView

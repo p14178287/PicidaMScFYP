@@ -56,5 +56,12 @@
     <string name="add">Add</string>
     <string name="view_all_symptoms">View All Symptoms</string>
 
+    <!--activity_main-->
+    <string name="mental_health_symptom">Symptoms</string>
+    <string name="checkup">CheckUp!</string>
+    <string name="appointments">Appointments</string>
+    <string name="check_your_symptoms">Check your Symptoms!</string>
+    <string name="assessment">Assessment</string>
+    <string name="additional_notes_here">Additional Notes Here</string>
 
 </resources>

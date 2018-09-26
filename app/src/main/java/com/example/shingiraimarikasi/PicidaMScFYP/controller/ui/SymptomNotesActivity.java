@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 import com.example.shingiraimarikasi.PicidaMScFYP.R;
 import com.example.shingiraimarikasi.PicidaMScFYP.controller.dataModel.SymptomDataActivity;
@@ -17,7 +16,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class ActivityNotes extends AppCompatActivity {
+public class SymptomNotesActivity extends AppCompatActivity {
 
 
     private EditText symptomTitleEditText;
@@ -37,7 +36,7 @@ public class ActivityNotes extends AppCompatActivity {
         symptomFormTitle = findViewById(R.id.symptomFormTitle);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notes);
+        setContentView(R.layout.activity_symptom_notes);
 
 
         Typeface questrialFont = Typeface.createFromAsset(getAssets(), "fonts/Questrial-Regular.otf");
@@ -68,7 +67,7 @@ public class ActivityNotes extends AppCompatActivity {
             symptomNotesEditText.setText("");
         });
         allSymptomButton.setOnClickListener(v -> {
-            Intent intent = new Intent(ActivityNotes.this, SymptomListActivity.class);
+            Intent intent = new Intent(SymptomNotesActivity.this, SymptomListActivity.class);
             startActivity(intent);
         });
     }
