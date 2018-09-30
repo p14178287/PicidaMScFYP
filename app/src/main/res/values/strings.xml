@@ -41,7 +41,7 @@
     <string name="button_sign_out">Sign Out</string>
     <string name="forgot_password_label">Forgot password?</string>
     <string name="forgot_password_message">We just need your registered Email Id to sent you password reset instructions.</string>
-    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_navigation">Picida Prototype</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -59,9 +59,9 @@
     <!--activity_main-->
     <string name="mental_health_symptom">Symptoms</string>
     <string name="checkup">CheckUp!</string>
-    <string name="appointments">Appointments</string>
     <string name="check_your_symptoms">Check your Symptoms!</string>
     <string name="assessment">Assessment</string>
     <string name="additional_notes_here">Additional Notes Here</string>
+    <string name="appointments">Appointments</string>
 
 </resources>

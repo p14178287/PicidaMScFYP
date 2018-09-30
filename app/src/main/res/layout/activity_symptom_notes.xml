@@ -7,92 +7,106 @@
     android:layout_height="match_parent"
     android:background="@color/colorConstraintLayoutBackground">
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:id="@+id/relativeLayout">
 
         <TextView
             android:id="@+id/symptomFormTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/add_new_symptoms"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/symptomTitleEditText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/symptomTitleEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/symptomFormTitle"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="53dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:autofillHints=""
             android:hint="@string/symptom_title"
+            android:inputType=""
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:inputType=""
-            android:autofillHints="" tools:targetApi="o" />
+            app:layout_constraintBottom_toTopOf="@+id/symptomNotesEditText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/symptomFormTitle"
+            tools:targetApi="o" />
 
         <Button
             android:id="@+id/addSymptomButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/allSymptomButton"
-            android:layout_below="@+id/symptomNotesEditText"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="28dp"
-            android:layout_marginBottom="29dp"
+            android:layout_margin="5dp"
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/add"
             android:textColor="@color/colorTextIcons"
+            app:layout_constraintBottom_toTopOf="@+id/allSymptomButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/symptomNotesEditText"
             tools:targetApi="lollipop" />
 
         <EditText
             android:id="@+id/symptomNotesEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/symptomTitleEditText"
-            android:layout_marginTop="30dp"
+            android:layout_width="0dp"
+            android:layout_height="142dp"
+            android:layout_margin="5dp"
+            android:autofillHints=""
             android:background="@drawable/rounded_button"
             android:ems="10"
             android:hint="@string/additional_notes_here"
             android:inputType="textMultiLine"
             android:textAlignment="center"
-            android:autofillHints="" tools:targetApi="o" />
+            app:layout_constraintBottom_toTopOf="@+id/addSymptomButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/symptomTitleEditText"
+            tools:targetApi="o" />
 
         <Button
             android:id="@+id/allSymptomButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentLeft="true"
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/view_all_symptoms"
-            android:textColor="@color/colorTextIcons" tools:targetApi="lollipop" />
-    </RelativeLayout>
+            android:textColor="@color/colorTextIcons"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addSymptomButton"
+            tools:targetApi="lollipop" />
+    </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header_navigation"
+        app:headerLayout="@layout/nav_header"
         app:menu="@menu/activity_navigation_drawer" />
+
 </android.support.v4.widget.DrawerLayout>

@@ -1,7 +1,6 @@
 package com.example.shingiraimarikasi.PicidaMScFYP.controller.ui;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
@@ -16,12 +15,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class SymptomNotesActivity extends AppCompatActivity {
+public class SymptomNotesActivity extends BaseActivity {
 
 
     private EditText symptomTitleEditText;
     private EditText symptomNotesEditText;
-    private Button addSymptomButton, allSymptomButton;
+    private Button addSymptomBtn, seeAllSymptomsBtn;
     private TextView symptomFormTitle;
 //    protected DatabaseReference ailmentRef = FirebaseDatabase;
 
@@ -33,8 +32,8 @@ public class SymptomNotesActivity extends AppCompatActivity {
 
         symptomTitleEditText = findViewById(R.id.symptomTitleEditText);
         symptomNotesEditText = findViewById(R.id.symptomNotesEditText);
-        addSymptomButton = findViewById(R.id.addSymptomButton);
-        allSymptomButton = findViewById(R.id.allSymptomButton);
+        addSymptomBtn = findViewById(R.id.addSymptomButton);
+        seeAllSymptomsBtn = findViewById(R.id.allSymptomButton);
         symptomFormTitle = findViewById(R.id.symptomFormTitle);
 
 
@@ -43,7 +42,7 @@ public class SymptomNotesActivity extends AppCompatActivity {
 
 
 
-        addSymptomButton.setOnClickListener(v -> {
+        addSymptomBtn.setOnClickListener(v -> {
 //            String symptomTitle, symptomNotes;
             String symptomTitle = symptomTitleEditText.getText().toString();
             String symptomNotes = symptomNotesEditText.getText().toString();
@@ -56,7 +55,7 @@ public class SymptomNotesActivity extends AppCompatActivity {
 
             DatabaseReference dbRef = FirebaseDatabase
                     .getInstance()
-                    .getReference(SymptomConstants.FIREBASE_CHILD_AILMENTS)
+                    .getReference(SymptomConstants.FIREBASE_CHILD_SYMPTOM)
                     .child(uid);
 
             DatabaseReference pushRef = dbRef.push();
@@ -70,10 +69,10 @@ public class SymptomNotesActivity extends AppCompatActivity {
         });
 
 
-//        allSymptomButton.setOnClickListener(v -> {
-//            Intent intent = new Intent(SymptomNotesActivity.this, SymptomListActivity.class);
-//            startActivity(intent);
-//        });
+        seeAllSymptomsBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(SymptomNotesActivity.this, SymptomListActivity.class);
+            startActivity(intent);
+        });
     }
 
 
