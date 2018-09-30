@@ -12,6 +12,11 @@ import com.example.shingiraimarikasi.PicidaMScFYP.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
+
+// TOM, THIS WHOLE CLASS IS NOT WORKING, SO IVE IMPLEMENTED THE SYMPTOM BUTTON IN NAVIGATIONCATIVITY CLASS, not sure why tho
+
+
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
@@ -23,6 +28,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button symptomBtn = findViewById(R.id.symptomBtn);
+        onStart();
 
         symptomBtn.setOnClickListener(v -> {
             System.out.println("yes"); //debugging print statement
@@ -40,6 +46,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             }
         };
 
+        onStop();
     }
 
 
