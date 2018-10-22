@@ -2,53 +2,98 @@ package com.example.shingiraimarikasi.PicidaMScFYP.controller.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Button;
 
 import com.example.shingiraimarikasi.PicidaMScFYP.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 
-
-// TOM, THIS WHOLE CLASS IS NOT WORKING, SO IVE IMPLEMENTED THE SYMPTOM BUTTON IN NAVIGATIONCATIVITY CLASS, not sure why tho
-
-
-public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends BaseActivity {
 
 
-    private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseAuth auth;
+    private FirebaseAuth.AuthStateListener authStateListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button symptomBtn = findViewById(R.id.symptomBtn);
-        onStart();
+//        setContentView(R.layout.activity_navigation); //for getting the camera button take out once camera button is working
 
-        symptomBtn.setOnClickListener(v -> {
-            System.out.println("yes"); //debugging print statement
-            Intent intent = new Intent(MainActivity.this, SymptomNotesActivity.class);
-            startActivity(intent);
-        });
+//        Button cameraBtn = findViewById(R.id.appointmentsButton); //checking to see if it can work
+
+
+//        cameraBtn.setOnClickListener(view -> {
+//            MainActivityPermissionsDispatcher.openCameraWithPermissionCheck(MainActivity.this);
+//            Toast.makeText(this, "Opening camera", Toast.LENGTH_LONG).show();
+//        });
+
+
+//                 auth.getCurrentUser();
+//            if (auth != null) {
+//                supportActionBar?.setTitle("Welcome, " + user.displayName + "!")
+//            } else {
+//
+//            }
+
+
+
 
         //TODO: attach the other button to a cllicklistener
 
-        mAuth = FirebaseAuth.getInstance();
-        mAuthListener = firebaseAuth -> {
-            FirebaseUser user = firebaseAuth.getCurrentUser();
-            if (user != null) {
-                getSupportActionBar().setTitle("Welcome, " + user.getDisplayName() + "!");
-            }
-        };
 
-        onStop();
+
+//        onStart();
+//        onStop();
     }
 
+    //GET RID ONCE WORKING IN KOTLIN NAVIGATIONACTIVITY CLASS
+
+//    /********* Permission request begins here ***********/
+//
+//    @NeedsPermission(Manifest.permission.CAMERA)
+//    void openCamera() {
+//
+//        Toast.makeText(this, "Opening camera", Toast.LENGTH_LONG).show();
+//    }
+//
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//        MainActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
+//    }
+//
+//    @OnShowRationale(Manifest.permission.CAMERA)
+//    void show_PCIDA_rationaleRequestForCamera(PermissionRequest request) {
+//        new AlertDialog.Builder(this).
+//                setTitle("mhata").setMessage("This permissioon is ").
+//                setPositiveButton("ok", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        request.proceed(); //if user okays permission
+//                    }
+//                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                request.cancel(); //where user doesn't agree
+//            }
+//        }).show();
+//    }
+//
+//    @OnPermissionDenied(Manifest.permission.CAMERA)
+//    void onPermissionDenied() {
+//        Toast.makeText(this, "Permission denied", Toast.LENGTH_LONG).show();
+//    }
+//
+//    @OnNeverAskAgain(Manifest.permission.CAMERA)
+//    void neverAskAgain() {
+//        Toast.makeText(this, "Never asking again", Toast.LENGTH_LONG).show();
+//    }
+//
+//    /********* Permission Handling Ends ***********/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -78,15 +123,17 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     public void onStart() {
         super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
+        auth.addAuthStateListener(authStateListener);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (mAuthListener != null) {
-            mAuth.removeAuthStateListener(mAuthListener);
+        if (authStateListener != null) {
+            auth.removeAuthStateListener(authStateListener);
         }
     }
+
+
 }
 

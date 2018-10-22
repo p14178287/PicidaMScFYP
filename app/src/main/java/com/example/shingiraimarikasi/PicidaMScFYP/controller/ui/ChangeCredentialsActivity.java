@@ -24,36 +24,10 @@ public class ChangeCredentialsActivity extends BaseActivity {
         //converted fields into local variables as accessed internally
         Button btnChangeEmail, btnChangePassword,
                 btnSendEmail, btnDelAccount, btnSignOut;
-        EditText oldEmail, newEmail, password, newPassword;
-
+        EditText oldEmail, newEmail, oldPassword, newPassword;
 
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_change_credentials);
-
-
-
-
-
-
-
-
-        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        //inflate your activity layout here!
-        View contentView = inflater.inflate(R.layout.activity_change_credentials, null, false);
-        drawerLayout.addView(contentView, 0);
-
-
-
-
-
-
-
-
-
-
-        //get firebase auth instance
         auth = FirebaseAuth.getInstance();
-
         //get current user
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -73,12 +47,12 @@ public class ChangeCredentialsActivity extends BaseActivity {
 
         oldEmail = findViewById(R.id.old_email);
         newEmail = findViewById(R.id.new_email);
-        password = findViewById(R.id.old_password);
+        oldPassword = findViewById(R.id.old_password);
         newPassword = findViewById(R.id.new_password);
 
 //        oldEmail.setVisibility(View.GONE); //temporarily disabled to see visibility in the layout, rem: to change and make them visible again
 //        newEmail.setVisibility(View.GONE);
-//        password.setVisibility(View.GONE);
+//        oldPassword.setVisibility(View.GONE);
 //        newPassword.setVisibility(View.GONE);
 
 //        changeEmail.setVisibility(View.GONE);
@@ -95,7 +69,7 @@ public class ChangeCredentialsActivity extends BaseActivity {
         btnChangeEmail.setOnClickListener(v -> {
             oldEmail.setVisibility(View.GONE);
             newEmail.setVisibility(View.VISIBLE);
-            password.setVisibility(View.GONE);
+            oldPassword.setVisibility(View.GONE);
             newPassword.setVisibility(View.GONE);
 //            changeEmail.setVisibility(View.VISIBLE);
 //            changePassword.setVisibility(View.GONE);
@@ -129,7 +103,7 @@ public class ChangeCredentialsActivity extends BaseActivity {
         btnChangePassword.setOnClickListener(v -> {
             oldEmail.setVisibility(View.GONE);
             newEmail.setVisibility(View.GONE);
-            password.setVisibility(View.GONE);
+            oldPassword.setVisibility(View.GONE);
             newPassword.setVisibility(View.VISIBLE);
 //            changeEmail.setVisibility(View.GONE);
 //            changePassword.setVisibility(View.VISIBLE);
@@ -148,18 +122,18 @@ public class ChangeCredentialsActivity extends BaseActivity {
                     user.updatePassword(newPassword.getText().toString().trim())
                             .addOnCompleteListener(task -> {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(ChangeCredentialsActivity.this, "Password is updated, sign in with new password!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ChangeCredentialsActivity.this, "Password is updated, sign in with new oldPassword!", Toast.LENGTH_SHORT).show();
                                     signOut();
 //                                    progressBar.setVisibility(View.GONE);
                                 } else {
-                                    Toast.makeText(ChangeCredentialsActivity.this, "Failed to update password!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ChangeCredentialsActivity.this, "Failed to update oldPassword!", Toast.LENGTH_SHORT).show();
 //                                    progressBar.setVisibility(View.GONE);
                                 }
 
                             });
                 }
             } else if (newPassword.getText().toString().trim().equals("")) {
-                newPassword.setError("Enter password");
+                newPassword.setError("Enter oldPassword");
 //                progressBar.setVisibility(View.GONE);
             }
 
@@ -168,7 +142,7 @@ public class ChangeCredentialsActivity extends BaseActivity {
         btnSendEmail.setOnClickListener(v -> {
             oldEmail.setVisibility(View.VISIBLE);
             newEmail.setVisibility(View.GONE);
-            password.setVisibility(View.GONE);
+            oldPassword.setVisibility(View.GONE);
             newPassword.setVisibility(View.GONE);
 //            changeEmail.setVisibility(View.GONE);
 //            changePassword.setVisibility(View.GONE);
@@ -183,7 +157,7 @@ public class ChangeCredentialsActivity extends BaseActivity {
                 auth.sendPasswordResetEmail(oldEmail.getText().toString().trim())
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
-                                Toast.makeText(ChangeCredentialsActivity.this, "Reset password email is sent!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ChangeCredentialsActivity.this, "Reset oldPassword email is sent!", Toast.LENGTH_SHORT).show();
 //                                progressBar.setVisibility(View.GONE);
                             } else {
                                 Toast.makeText(ChangeCredentialsActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();

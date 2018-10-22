@@ -4,75 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/contentNav"
     android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.shingiraimarikasi.PicidaMScFYP.controller.ui.NavigationActivity"
     tools:showIn="@layout/app_bar_navigation">
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp"
-        android:background="@drawable/yoga">
+        android:background="@drawable/yoga3">
 
         <TextView
             android:id="@+id/mainTitleTextView"
-            android:layout_width="fill_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="250dp"
             android:text="@string/checkup"
             android:textAlignment="center"
             android:textColor="@color/colorSecondaryText"
-            android:textSize="50sp"
-            android:textStyle="bold" />
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/symptomBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="250dp"
-            android:layout_marginLeft="200dp"
-            android:layout_marginStart="200dp">
 
-            <Button
-                android:id="@+id/symptomBtn"
-                android:layout_width="180dp"
-                android:layout_height="100dp"
-                android:layout_gravity="bottom"
-                android:layout_marginRight="5dp"
-                android:background="@drawable/rounded_button"
-                android:backgroundTint="@color/colorPrimary"
-                android:text="@string/mental_health_symptom"
-                android:textColor="@color/colorTextIcons"
-                android:textSize="20sp"
-                android:layout_marginEnd="5dp" tools:targetApi="lollipop" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/symptomBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/mental_health_symptom"
+            android:textColor="@color/colorTextIcons"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/appointmentsButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainTitleTextView"
+            tools:targetApi="lollipop" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginLeft="200dp"
-            android:layout_marginStart="200dp"
-            android:layout_marginTop="40dp">
 
-            <Button
-                android:id="@+id/appointmentsButton"
-                android:layout_width="180dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="33dp"
-                android:background="@drawable/rounded_button"
-                android:backgroundTint="@color/signInButtonColour"
-                android:text="@string/appointments"
-                android:textColor="@color/colorPrimaryText"
-                android:textSize="20sp"
-                tools:targetApi="lollipop" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/appointmentsButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/signInButtonColour"
+            android:text="@string/appointments"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/symptomBtn"
+            tools:targetApi="lollipop" />
 
-    </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"

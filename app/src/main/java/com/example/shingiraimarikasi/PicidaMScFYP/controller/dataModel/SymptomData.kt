@@ -2,7 +2,7 @@ package com.example.shingiraimarikasi.PicidaMScFYP.controller.dataModel
 
 import java.util.*
 
-class SymptomDataActivity {
+class SymptomData {
 //    inner class Ailment {
         var title: String? = null
             internal set

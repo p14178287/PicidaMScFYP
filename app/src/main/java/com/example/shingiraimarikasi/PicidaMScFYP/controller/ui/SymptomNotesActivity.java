@@ -2,14 +2,14 @@ package com.example.shingiraimarikasi.PicidaMScFYP.controller.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.design.widget.NavigationView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.shingiraimarikasi.PicidaMScFYP.R;
-import com.example.shingiraimarikasi.PicidaMScFYP.controller.dataModel.SymptomDataActivity;
+import com.example.shingiraimarikasi.PicidaMScFYP.controller.dataModel.SymptomData;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +29,7 @@ public class SymptomNotesActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_symptom_notes);
+//        super.onCreateDrawer();
 
         symptomTitleEditText = findViewById(R.id.symptomTitleEditText);
         symptomNotesEditText = findViewById(R.id.symptomNotesEditText);
@@ -37,18 +38,13 @@ public class SymptomNotesActivity extends BaseActivity {
         symptomFormTitle = findViewById(R.id.symptomFormTitle);
 
 
-//        Typeface questrialFont = Typeface.createFromAsset(getAssets(), "fonts/Questrial-Regular.otf");
-//        symptomFormTitle.setTypeface(questrialFont);
-
-
-
         addSymptomBtn.setOnClickListener(v -> {
 //            String symptomTitle, symptomNotes;
             String symptomTitle = symptomTitleEditText.getText().toString();
             String symptomNotes = symptomNotesEditText.getText().toString();
 
             //importing the data class that will act on the data sent across
-            SymptomDataActivity symptom = new SymptomDataActivity(symptomTitle, symptomNotes);
+            SymptomData symptom = new SymptomData(symptomTitle, symptomNotes);
 
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             String uid = user.getUid();

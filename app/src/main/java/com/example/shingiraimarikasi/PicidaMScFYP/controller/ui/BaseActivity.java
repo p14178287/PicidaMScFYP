@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.Toolbar;
 
 import com.example.shingiraimarikasi.PicidaMScFYP.R;
 
@@ -14,6 +15,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
     ActionBarDrawerToggle toggle;
     protected DrawerLayout drawerLayout;
+
 
     protected void onCreateDrawer() {
         drawerLayout = findViewById(R.id.drawerLayout);

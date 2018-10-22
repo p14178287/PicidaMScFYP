@@ -7,31 +7,31 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
-            android:title="@string/username" />
+            android:title="@string/camera_permission" />
         <item
             android:id="@+id/pass_reset"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/username" />
+            android:title="@string/button_reset_password" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/username" />
+            android:title="@string/slide_show" />
         <item
             android:id="@+id/sign_out"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/sign_out" />
     </group>
 
-    <item android:title="@string/username">
+    <item android:title="@string/share_profile">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="@string/username" />
+                android:title="@string/share_profile" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/username" />
+                android:title="@string/email_profile" />
         </menu>
     </item>
 

@@ -5,7 +5,7 @@
     android:id="@+id/signInPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF0097A7"
+    android:background="@drawable/yoga"
     tools:layout_editor_absoluteY="25dp">
 
     <!--find appropriate logo-->
@@ -36,12 +36,15 @@
             android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
             android:textColorHighlight="@color/common_google_signin_btn_text_dark_default"
             android:textSize="18sp"
-            android:autofillHints="" tools:targetApi="o"/>
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/login_password"
